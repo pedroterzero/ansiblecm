@@ -1,4 +1,4 @@
-FROM alpine:3.20.2
+FROM alpine:3.21.3
 
 RUN apk add --no-cache \
 		bzip2 \
@@ -12,9 +12,9 @@ RUN apk add --no-cache \
 		musl-dev \
 		openssh \
 		openssl-dev \
-		python3-dev=3.12.3-r1 \
+		python3-dev=3.12.9-r0 \
 		py3-cffi \
-		py3-cryptography=42.0.7-r0 \
+		py3-cryptography=44.0.0-r0 \
 		py3-setuptools=70.3.0-r0 \
 		sshpass \
 		tar \
@@ -28,7 +28,7 @@ RUN apk add --no-cache \
 	/opt/venv/bin/pip install --upgrade pip \
 		&& \
 	/opt/venv/bin/pip install \
-		ansible==10.3.0 \
+		ansible==11.2.0 \
 		botocore==1.31.44 \
 		boto3==1.28.44 \
 		awscli==1.29.44 \
